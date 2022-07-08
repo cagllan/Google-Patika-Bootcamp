@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8257619337878645163}
   - component: {fileID: 7660527552784498668}
+  - component: {fileID: 7821091957042133102}
   m_Layer: 0
   m_Name: Prefab_Planet
   m_TagString: Untagged
@@ -151,10 +152,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8257619337878645160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5900380ae0c8fb74398785f9d14b3bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetObject: {fileID: 0}
   _speedAmount: 100
+--- !u!114 &7821091957042133102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257619337878645160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebdb3c95464b58459b2f8a3a40ba490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bezierCurve: []
+  _speedCoef: 1
