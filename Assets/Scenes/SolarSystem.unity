@@ -434,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth
       objectReference: {fileID: 0}
+    - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8257619336839205452, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -639,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 686686342869126503, guid: 60accf59f7de831418bbeb912087694e, type: 3}
       propertyPath: m_Name
       value: Moon
+      objectReference: {fileID: 0}
+    - target: {fileID: 686686342869126503, guid: 60accf59f7de831418bbeb912087694e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 686686342869126506, guid: 60accf59f7de831418bbeb912087694e, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -873,6 +881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Venus
       objectReference: {fileID: 0}
+    - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8257619336839205452, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1078,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mercury
       objectReference: {fileID: 0}
+    - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8257619336839205452, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1203,6 +1219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jupiter
       objectReference: {fileID: 0}
+    - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8257619336839205452, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1319,6 +1339,10 @@ PrefabInstance:
     - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Name
       value: Mars
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257619336839205451, guid: 75f269204bb081d429f954c73fac645f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8257619336839205452, guid: 75f269204bb081d429f954c73fac645f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1515,6 +1539,10 @@ PrefabInstance:
     - target: {fileID: 7277773895344478244, guid: 9e6456d005c71b74488065846e5619ba, type: 3}
       propertyPath: m_Name
       value: Sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277773895344478244, guid: 9e6456d005c71b74488065846e5619ba, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7277773895344478250, guid: 9e6456d005c71b74488065846e5619ba, type: 3}
       propertyPath: m_Materials.Array.data[0]
