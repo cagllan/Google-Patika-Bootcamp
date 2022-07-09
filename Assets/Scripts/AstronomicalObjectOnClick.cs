@@ -9,12 +9,16 @@ public class AstronomicalObjectOnClick : MonoBehaviour
 
     [SerializeField] float _maxDistance;
 
-    
+    AstronomicalObjectCanvasEditor _astronomicalObjectCanvasEditor;
     
     Ray _ray;
     RaycastHit _hit;
     
-
+    private void Awake() 
+    {
+        _astronomicalObjectCanvasEditor = GetComponent<AstronomicalObjectCanvasEditor>();
+    }
+   
     private void Update() 
     {
         if(!Input.GetMouseButtonDown(0)) return;
@@ -32,7 +36,8 @@ public class AstronomicalObjectOnClick : MonoBehaviour
         {
             if(_hit.transform != null)
             {
-                Debug.Log(_hit.transform.gameObject.name);
+                _astronomicalObjectCanvasEditor.EnableCanvas();
+                _astronomicalObjectCanvasEditor.SetAstronomicalObjectName(_hit.transform.gameObject.name);
             }
         }
     }
