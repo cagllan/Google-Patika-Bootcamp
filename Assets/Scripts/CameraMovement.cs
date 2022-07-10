@@ -19,10 +19,7 @@ public class CameraMovement : MonoBehaviour
 
 
     private void Update() 
-    {
-
-        
-        
+    {  
 
         if(CheckHorizantalMouseMovement())
         {
@@ -56,20 +53,6 @@ public class CameraMovement : MonoBehaviour
         {
             StartAutoRotateRoutine();
         }
-        
-            
-                
-           
-            
-            
-        
-
-
-
-            
-            
-        
-
         
     }
 
