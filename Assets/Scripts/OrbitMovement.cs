@@ -19,7 +19,7 @@ public class OrbitMovement : MonoBehaviour
         StopOrbitalRotationRoutine();
     }
 
-    private void StartOrbitalRotationRoutine()
+    public void StartOrbitalRotationRoutine()
     {
         StopOrbitalRotationRoutine();
 
@@ -28,7 +28,7 @@ public class OrbitMovement : MonoBehaviour
         StartCoroutine(_rotationRoutine);
     }
 
-    private void StopOrbitalRotationRoutine()
+    public void StopOrbitalRotationRoutine()
     {
         if(_rotationRoutine != null)
         {
