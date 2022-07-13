@@ -28,6 +28,8 @@ public class MoveToTarget : MonoBehaviour
 
     private void OnDrawGizmos() 
     {
+        if(_targetObject == null) return;
+
          Gizmos.color = Color.green;        
          Gizmos.DrawLine(_targetObject.position, transform.position + _distanceToTarget);
     }
