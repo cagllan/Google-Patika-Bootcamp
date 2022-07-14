@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OrbitMovement : MonoBehaviour
@@ -22,7 +21,7 @@ public class OrbitMovement : MonoBehaviour
     public void StartOrbitalRotationRoutine()
     {
         StopOrbitalRotationRoutine();
-
+        
         _rotationRoutine = OrbitalRotationProgress();
 
         StartCoroutine(_rotationRoutine);
@@ -30,6 +29,7 @@ public class OrbitMovement : MonoBehaviour
 
     public void StopOrbitalRotationRoutine()
     {
+        
         if(_rotationRoutine != null)
         {
             StopCoroutine(_rotationRoutine);
@@ -41,8 +41,7 @@ public class OrbitMovement : MonoBehaviour
     {
         float totalAngle = 0;
         while(true)
-        {
-            
+        {            
             transform.RotateAround(_targetObject.position, Vector3.up, _speedAmount * Time.deltaTime);
             totalAngle += _speedAmount * Time.deltaTime;
 

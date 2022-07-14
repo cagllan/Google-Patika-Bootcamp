@@ -1,80 +1,55 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using System;
 
 public class MeteorSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _spawnObject;
+    [SerializeField] private Meteor _spawnObject;
     [SerializeField] private float _minSpawnDistance;
     [SerializeField] private float _maxSpawnDistance;
-    [SerializeField] private TMP_Text _meteorButtonText;
+    
 
+    private Meteor _clone;
 
-    private GameObject _clone;
+    public Meteor ActiveMeteor => _clone;
     private IEnumerator _destroyMeteorRoutine;
 
+    public bool IsMeteorActive { get; private set;}
 
+
+    public Action OnMeteorSpawned { get; set;}
+    public Action OnMeteorDespawned {get; set; }
+   
     private void Start() 
-    {        
-        MeteorCreateAndDestroyProgress();
+    {     
+       SpawnMeteor();
+    }
+
+    private void OnDestroy()   
+    {
+        _clone.OnMeteorDestroying -= OnMeteorDestroying;
     }
 
 
-    private void CreateMeteor()
+    public void SpawnMeteor() 
     {        
-        StartDestroyMeteorRoutine();
 
-        Vector3 spawnObjectPosition =  Random.insideUnitCircle.normalized * Random.Range(_minSpawnDistance, _maxSpawnDistance);
+        Vector3 spawnObjectPosition = UnityEngine.Random.insideUnitCircle.normalized * UnityEngine.Random.Range(_minSpawnDistance, _maxSpawnDistance);
         _clone = Instantiate(_spawnObject, spawnObjectPosition, Quaternion.identity);
         _clone.transform.SetParent(gameObject.transform, true);
-        _meteorButtonText.text = "Destroy Meteor";
+        IsMeteorActive = true;
+
+        _clone.OnMeteorDestroying += OnMeteorDestroying;
+
+        OnMeteorSpawned?.Invoke(); 
     }
 
-    public void DestroyMeteor()
-    {       
-            if(_clone != null)
-            {
-            _clone.GetComponent<MeteorParticleSystem>().PlayExplodedEffect();
-             Destroy(_clone, 1f);
-            _meteorButtonText.text = "Create Meteor";
-            }
+    private void OnMeteorDestroying()
+    {      
+        IsMeteorActive = false;
+        _clone.OnMeteorDestroying -= OnMeteorDestroying;
+        OnMeteorDespawned?.Invoke();
     }
-
-    public void MeteorCreateAndDestroyProgress()
-    {
-
-        if(_clone == null)
-        {
-            CreateMeteor();
-            return;
-        }
-        
-            DestroyMeteor();
-    }
-
-    public void StartDestroyMeteorRoutine()
-    {
-        StopDestroyMeteorRoutine();
-
-        _destroyMeteorRoutine = DestroyMeteorProgress();
-        StartCoroutine(_destroyMeteorRoutine);
-    }
-
-    public void StopDestroyMeteorRoutine()
-    {
-        if(_destroyMeteorRoutine != null)
-        {
-            StopCoroutine(_destroyMeteorRoutine);
-            _destroyMeteorRoutine = null;
-        }
-    }
-    private IEnumerator DestroyMeteorProgress()
-    {
-        yield return new WaitForSeconds(5);
-        DestroyMeteor();
-    }
-
 
 }
 

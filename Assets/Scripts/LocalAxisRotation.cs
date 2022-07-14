@@ -1,11 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AxisMovement : MonoBehaviour
+public class LocalAxisRotation : MonoBehaviour
 {
     [SerializeField] private float _speedAmount;
     private IEnumerator _rotationRoutine;
+
     void Start()
     {
         StartAxesRotationRoutine();
@@ -19,9 +19,7 @@ public class AxisMovement : MonoBehaviour
     private void StartAxesRotationRoutine()
     {
         StopAxesRotationRoutine();
-
         _rotationRoutine = AxisRotationProgress();
-
         StartCoroutine(_rotationRoutine);
     }
 
@@ -35,10 +33,10 @@ public class AxisMovement : MonoBehaviour
     
    private IEnumerator AxisRotationProgress()
    {
-    while(true)
-    {
-        transform.Rotate(Vector3.up * _speedAmount* Time.deltaTime, Space.Self);
-        yield return new WaitForEndOfFrame();
-    }
+        while(true)
+        {
+            transform.Rotate(Vector3.up * _speedAmount* Time.deltaTime, Space.Self);
+            yield return new WaitForEndOfFrame();
+        }
    }
 }

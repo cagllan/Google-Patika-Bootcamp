@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class BezierCurveEditor : MonoBehaviour
 {
-    [SerializeField] private Transform[] _curvePoints;
-    private Vector3 _gizmoPosition;
+    [SerializeField] private Transform[] _curvePoints;    
     [Range(0.02f, 0.1f)] public float _tCoef = 0.05f;
+
+    private Vector3 _gizmoPosition;
 
 
     private void OnDrawGizmos() 

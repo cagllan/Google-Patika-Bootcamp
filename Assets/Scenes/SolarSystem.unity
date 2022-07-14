@@ -222,52 +222,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9201669442798588064, guid: bcf594fb9b9e31c4591f9ccc3586b917, type: 3}
   m_PrefabInstance: {fileID: 139990743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &153705126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 153705128}
-  - component: {fileID: 153705127}
-  m_Layer: 0
-  m_Name: PlanetExplosionParticle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &153705127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153705126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57419fad2cfcb604dbac230f07cb692f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _planetExplosionParticle: {fileID: 4545971065064800206, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
---- !u!4 &153705128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153705126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 731946488}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &257841143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,8 +412,9 @@ GameObject:
   - component: {fileID: 515308311}
   - component: {fileID: 515308310}
   - component: {fileID: 515308309}
+  - component: {fileID: 515308313}
   m_Layer: 5
-  m_Name: MeteorCanvas
+  m_Name: MeteorButtonCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,6 +502,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &515308313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515308308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47760244d8542544ebd400788274b696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _meteorButton: {fileID: 1521782049}
+  _meteorButtonText: {fileID: 1346255037}
+  _meteorSpawner: {fileID: 1666635160}
 --- !u!1001 &593551308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -715,7 +685,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 25, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &596092760
 MonoBehaviour:
@@ -761,8 +731,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1015283172}
-        m_TargetAssemblyTypeName: AstronomicalObjectCanvasEditor, Assembly-CSharp
+      - m_Target: {fileID: 1180974595}
+        m_TargetAssemblyTypeName: AstoronomicalObjectInfoCanvas, Assembly-CSharp
         m_MethodName: DisableCanvas
         m_Mode: 1
         m_Arguments:
@@ -1066,11 +1036,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!4 &731946488 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-  m_PrefabInstance: {fileID: 2047018013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &807735034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1587,7 +1552,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69722d0395810cc4591e5c67f8580ae3, type: 3}
+  m_Script: {fileID: 11500000, guid: c80e8ac852a406b439d96a48dabd1e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _uiCanvas: {fileID: 1180974593}
@@ -1618,7 +1583,7 @@ RectTransform:
   m_GameObject: {fileID: 981425011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1569920755}
@@ -1626,11 +1591,11 @@ RectTransform:
   m_Father: {fileID: 1180974594}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &981425013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,7 +1609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1803,32 +1768,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015283171}
-  - component: {fileID: 1015283170}
   - component: {fileID: 1015283172}
   m_Layer: 0
-  m_Name: AstronomicalObjectDetection
+  m_Name: AstronomicalObjectInputController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1015283170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015283169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93270cf780c1f5e44a22ef02f3e448d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainCamera: {fileID: 963194227}
-  _targetLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  _maxDistance: 1000
 --- !u!4 &1015283171
 Transform:
   m_ObjectHideFlags: 0
@@ -1853,11 +1800,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015283169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df3c3c8d32f9fd549ba58f6648162179, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d16d28ff99c66949a2bbff770953cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uiCanvas: {fileID: 1180974593}
-  _textTMPAstronomicalObjectName: {fileID: 1569920756}
+  _mainCamera: {fileID: 963194227}
+  _targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _maxDistance: 1000
 --- !u!1 &1180974590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,13 +1820,14 @@ GameObject:
   - component: {fileID: 1180974593}
   - component: {fileID: 1180974592}
   - component: {fileID: 1180974591}
+  - component: {fileID: 1180974595}
   m_Layer: 5
-  m_Name: AstroObjectUICanvas
+  m_Name: AstoronomicalObjectInfoCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1180974591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,6 +1910,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1180974595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180974590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e18a305bc1d1f459b9c18651b0f37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiCanvas: {fileID: 1180974593}
+  _textTMPAstronomicalObjectName: {fileID: 1569920756}
+  _astronomicalObjectInputController: {fileID: 1015283172}
 --- !u!1001 &1293989710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2616,9 +2582,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1666635160}
-        m_TargetAssemblyTypeName: MeteorSpawner, Assembly-CSharp
-        m_MethodName: MeteorCreateAndDestroyProgress
+      - m_Target: {fileID: 515308313}
+        m_TargetAssemblyTypeName: MeteorCanvasButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2751,8 +2717,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 180
-  m_fontSizeBase: 180
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -2845,10 +2811,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c8122099b547d646a8cbd94aaae8c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnObject: {fileID: 5057485950489947087, guid: a0ce6add400838040b28493433949a93, type: 3}
+  _spawnObject: {fileID: 1598826976862033112, guid: a0ce6add400838040b28493433949a93, type: 3}
   _minSpawnDistance: 90
   _maxSpawnDistance: 120
-  _meteorButtonText: {fileID: 1346255037}
 --- !u!1 &1727832237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,64 +2942,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ad3753cd53e864abdd62a5fde7b3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2047018013
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 153705128}
-    m_Modifications:
-    - target: {fileID: 474725896211349844, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_Name
-      value: Prefab_Explosion
-      objectReference: {fileID: 0}
-    - target: {fileID: 4545971065064800206, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884232142924243560, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 24e632f7998b7594f97ac185a00bc015, type: 3}

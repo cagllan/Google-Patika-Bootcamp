@@ -1,29 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MeteorCrashDetector : MonoBehaviour
 {
-    private MeteorParticleSystem explodedEffect;
-    private MeteorSpawner _meteorSpawner;
-    private PlanetExplosionParticle _planetExplosionParticle;
-    private PlanetExplosionParticle _clone;
-    private void Awake() 
-    {
-        _meteorSpawner = FindObjectOfType<MeteorSpawner>();
-        _planetExplosionParticle = FindObjectOfType<PlanetExplosionParticle>();        
-    }
+    [SerializeField] private ParticleSystem _crashParticle;
+
+    public Action OnMeteorCrashed { get; set; }
+    
 
     private void OnCollisionEnter(Collision other) 
     {
         ContactPoint contact = other.contacts[0];
         Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
         Vector3 pos = contact.point;
+       
+        _crashParticle.transform.position = pos;
+        _crashParticle.transform.SetParent(other.gameObject.transform,true);
+        _crashParticle.Play();
 
-        _clone = Instantiate(_planetExplosionParticle, pos, rot);        
-        _clone.transform.SetParent(other.gameObject.transform,true);        
-        _clone.GetPlanetExplosionParticle().Play();
-        
-        _meteorSpawner.DestroyMeteor();
+        OnMeteorCrashed?.Invoke();
+
     }
 }
+
+
+

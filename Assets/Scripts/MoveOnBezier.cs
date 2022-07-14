@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveOnBezier : MonoBehaviour
@@ -9,6 +8,7 @@ public class MoveOnBezier : MonoBehaviour
     [SerializeField] private float _speedCoef = 1;
 
     private int _runningBezierCurveNo=0;
+    
     private void Start()
     {
         StartCoroutine(MoveOnBezierRoute());
