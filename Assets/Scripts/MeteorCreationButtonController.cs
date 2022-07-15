@@ -2,11 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-public class MeteorCanvasButtonController : MonoBehaviour
+public class MeteorCreationButtonController : MonoBehaviour
 {
-    [SerializeField] private Button _meteorButton;
-    [SerializeField] private TMP_Text _meteorButtonText;
+    [SerializeField] private Button _meteorCreationButton;
+    [SerializeField] private TMP_Text _meteorCreationButtonText;
 
     [SerializeField] private MeteorSpawner _meteorSpawner;
 
@@ -23,12 +22,12 @@ public class MeteorCanvasButtonController : MonoBehaviour
 
     private void OnMeteorSpawn()
     {
-        _meteorButtonText.text = "Destroy Meteor";
+        _meteorCreationButtonText.text = "Destroy Meteor";
     }
 
     private void OnMeteorDespawn()
     {        
-        _meteorButtonText.text = "Create Meteor";
+        _meteorCreationButtonText.text = "Create Meteor";
     }
 
     public void OnButtonClicked()

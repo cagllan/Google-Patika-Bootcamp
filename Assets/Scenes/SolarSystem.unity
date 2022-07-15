@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 515308309}
   - component: {fileID: 515308313}
   m_Layer: 5
-  m_Name: MeteorButtonCanvas
+  m_Name: MeteorCreationCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,11 +511,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 515308308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47760244d8542544ebd400788274b696, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af6d82fdcca6d44e85897994f47d212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meteorButton: {fileID: 1521782049}
-  _meteorButtonText: {fileID: 1346255037}
+  _meteorCreationButton: {fileID: 1521782049}
+  _meteorCreationButtonText: {fileID: 1346255037}
   _meteorSpawner: {fileID: 1666635160}
 --- !u!1001 &593551308
 PrefabInstance:
@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 1346255038}
   - component: {fileID: 1346255037}
   m_Layer: 5
-  m_Name: MeteorButtonText
+  m_Name: MeteorCreationText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2511,7 +2511,7 @@ GameObject:
   - component: {fileID: 1521782050}
   - component: {fileID: 1521782049}
   m_Layer: 5
-  m_Name: MeteorButton
+  m_Name: MeteorCreationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2583,7 +2583,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 515308313}
-        m_TargetAssemblyTypeName: MeteorCanvasButtonController, Assembly-CSharp
+        m_TargetAssemblyTypeName: MeteorCreationButtonController, Assembly-CSharp
         m_MethodName: OnButtonClicked
         m_Mode: 1
         m_Arguments:
