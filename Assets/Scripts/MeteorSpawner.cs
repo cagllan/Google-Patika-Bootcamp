@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using System;
 
@@ -11,9 +10,6 @@ public class MeteorSpawner : MonoBehaviour
 
     private Meteor _clone;
 
-    public Meteor ActiveMeteor => _clone;
-    private IEnumerator _destroyMeteorRoutine;
-
     public bool IsMeteorActive { get; private set;}
 
 
@@ -23,6 +19,13 @@ public class MeteorSpawner : MonoBehaviour
     private void Start() 
     {     
        SpawnMeteor();
+    }
+
+    private void Update() 
+    {
+        if(!Input.GetKeyDown(KeyCode.Space)) return;        
+        
+        SpawnMeteor();        
     }
 
     private void OnDestroy()   

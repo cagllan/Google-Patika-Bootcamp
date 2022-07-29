@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1890511886c604a855413f94aa5613, type: 3}
+  m_Name: Level
+  m_EditorClassIdentifier: 
+  Star: {fileID: 11400000, guid: 611d1c731daa1584fa7d5904a9176a60, type: 2}
+  Planets:
+  - Planet: {fileID: 11400000, guid: a255abda1a70d764884ca4e9d90bcfd1, type: 2}
+    DistanceToStar: 150
+    Satellites:
+    - Satellite: {fileID: 11400000, guid: 326858b4ef1e6a34b8e1655226c4c764, type: 2}
+      DistanceToPlanet: 20
+  - Planet: {fileID: 11400000, guid: a0a08729e21941b4981a6e6121e4c3e1, type: 2}
+    DistanceToStar: 50
+    Satellites:
+    - Satellite: {fileID: 11400000, guid: 326858b4ef1e6a34b8e1655226c4c764, type: 2}
+      DistanceToPlanet: 30
+  - Planet: {fileID: 11400000, guid: 7bb1d859fab8fa3449b43f45d88f5cc4, type: 2}
+    DistanceToStar: 100
+    Satellites:
+    - Satellite: {fileID: 11400000, guid: 326858b4ef1e6a34b8e1655226c4c764, type: 2}
+      DistanceToPlanet: 30
+  - Planet: {fileID: 11400000, guid: 4f67e615bea425e4eb810f41b7ca1077, type: 2}
+    DistanceToStar: 200
+    Satellites:
+    - Satellite: {fileID: 11400000, guid: 326858b4ef1e6a34b8e1655226c4c764, type: 2}
+      DistanceToPlanet: 30
+  - Planet: {fileID: 11400000, guid: 05cbee6f6e4d7814aa94e7861aa36a63, type: 2}
+    DistanceToStar: 250
+    Satellites:
+    - Satellite: {fileID: 11400000, guid: 326858b4ef1e6a34b8e1655226c4c764, type: 2}
+      DistanceToPlanet: 30

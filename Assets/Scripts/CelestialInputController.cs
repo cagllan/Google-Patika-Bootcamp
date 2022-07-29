@@ -1,7 +1,8 @@
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 
-public class AstronomicalObjectInputController : MonoBehaviour
+public class CelestialInputController : MonoBehaviour
 {
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private LayerMask _targetLayerMask;
@@ -16,18 +17,21 @@ public class AstronomicalObjectInputController : MonoBehaviour
     {
         if(!Input.GetMouseButtonDown(0)) return;
 
-        AstronomicalObjectOnClickProcess();        
+        CelestialOnClickProcess();        
     }
 
 
-    private void AstronomicalObjectOnClickProcess()
+    private void CelestialOnClickProcess()
     {
-        
+        bool currentEvent = EventSystem.current.IsPointerOverGameObject();
+
+        if (currentEvent) return;
+
+
         _ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
         if(Physics.Raycast(_ray,out _hit, _maxDistance, _targetLayerMask))
         {
-            
             OnObjectClicked?.Invoke(_hit.transform);
         }
     }

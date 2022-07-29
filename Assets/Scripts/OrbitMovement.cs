@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class OrbitMovement : MonoBehaviour
 {
+    
     [SerializeField] private Transform _targetObject;
-    [SerializeField] private float _speedAmount;
+
+    public Transform TargetObject { set{ _targetObject = value;}}
+    [SerializeField] private float _speedAmount ;
     private float _fullRotationAngle = 360f;
     private IEnumerator _rotationRoutine;
 
@@ -41,7 +44,8 @@ public class OrbitMovement : MonoBehaviour
     {
         float totalAngle = 0;
         while(true)
-        {            
+        {         
+           
             transform.RotateAround(_targetObject.position, Vector3.up, _speedAmount * Time.deltaTime);
             totalAngle += _speedAmount * Time.deltaTime;
 

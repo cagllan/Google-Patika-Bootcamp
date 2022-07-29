@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b0c6ffa1cae664bbb7e778b6415b65, type: 3}
+  m_Name: Venus
+  m_EditorClassIdentifier: 
+  _celestialName: Venus
+  CelestialDescription: Second planet in the solar system.
+  Radius: 0
+  CelestialPrefab: {fileID: 1340202179508789271, guid: 0e9663a0e2edaf84e87931eb7325d2fc, type: 3}
+  Population: 0
+  Satellites: []

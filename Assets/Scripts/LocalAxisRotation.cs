@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LocalAxisRotation : MonoBehaviour
 {
-    [SerializeField] private float _speedAmount;
+    [SerializeField] SpeedProviderBase _speedProvider;
     private IEnumerator _rotationRoutine;
 
     void Start()
@@ -34,8 +34,8 @@ public class LocalAxisRotation : MonoBehaviour
    private IEnumerator AxisRotationProgress()
    {
         while(true)
-        {
-            transform.Rotate(Vector3.up * _speedAmount* Time.deltaTime, Space.Self);
+        {  
+            transform.Rotate(Vector3.up * _speedProvider.GetSpeed() * Time.deltaTime, Space.Self);
             yield return new WaitForEndOfFrame();
         }
    }
